@@ -18,15 +18,15 @@ fn main() {
             .help("Port to send reset"))
         .get_matches();
 
-    let server = matches.value_of("port").unwrap_or("17");
+    let server = matches.value_of("port").unwrap_or("-1");
     println!("The server you chose is: {}", server);
 
     let port : i64 = match server {
-        "rose" => 0,
-        "martha" => 1,
-        "donna" => 2,
-        "clara" => 3,
-        "amy" => 4,
+        "rose" => 17,
+        "martha" => 27,
+        "donna" => 22,
+        "clara" => 23,
+        "amy" => 24,
         _ => -1
     };
 
